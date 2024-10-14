@@ -21,7 +21,7 @@ export default function Home() {
           <Card style={{ width: '60%', marginLeft: '18%', padding: '1.5rem', marginTop: '8%', marginBottom: '6%' }}>
             <CardHeader>
               <CardTitle style={{ fontSize: '3rem' }}>Defi Dapp</CardTitle>
-              <CardDescription style={{ fontSize: '1.2rem', marginTop: '1rem' }}>Something</CardDescription>
+              <CardDescription style={{ fontSize: '1.2rem', marginTop: '1rem' }}>Staking Module</CardDescription>
             </CardHeader>
             <CardContent>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
