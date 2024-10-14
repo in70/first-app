@@ -1,7 +1,11 @@
+"use client"
 import Sidebar from "../components/ui/sidebar/Sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "../components/ui/button";
+import { useToast } from "../hooks/use-toast"
 
 export default function Home() {
+  const { toast } = useToast()
   return (
     <div style={{ display: 'flex', height: '100vh' }}>
       <Sidebar />
@@ -60,32 +64,44 @@ export default function Home() {
               </div>
 
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
-                <button
+                <Button
                   style={{
                     backgroundColor: '#4CAF50',
                     color: 'white',
-                    padding: '0.75rem 1.5rem',
+                    padding: '1.5rem 2rem',
                     border: 'none',
                     borderRadius: '4px',
                     cursor: 'pointer',
                     fontSize: '1rem'
+                  }}
+                  onClick={() => {
+                    toast({
+                      title: "Transaction Success!",
+                      description: "The block has confirmed.",
+                    })
                   }}
                 >
                   Stake
-                </button>
-                <button
+                </Button>
+                <Button
                   style={{
                     backgroundColor: '#007BFF',
                     color: 'white',
-                    padding: '0.75rem 1.5rem',
+                    padding: '1.5rem 2rem',
                     border: 'none',
                     borderRadius: '4px',
                     cursor: 'pointer',
                     fontSize: '1rem'
                   }}
+                  onClick={() => {
+                    toast({
+                      title: "Transaction Success!",
+                      description: "The block has confirmed.",
+                    })
+                  }}
                 >
                   Bond
-                </button>
+                </Button>
               </div>
             </div>
             </CardContent>
