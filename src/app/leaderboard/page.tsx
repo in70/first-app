@@ -19,8 +19,8 @@ export default function Leaderboard() {
   useEffect(() => {
     const generatedAddresses: string[] = [];
     for (let i = 0; i < 20; i++) {
-      let id = crypto.randomBytes(32).toString("hex");
-      let wallet = new ethers.Wallet("0x" + id);
+      const id = crypto.randomBytes(32).toString("hex");
+      const wallet = new ethers.Wallet("0x" + id);
       generatedAddresses.push(wallet.address);
     }
     setAddresses(generatedAddresses);
