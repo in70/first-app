@@ -7,12 +7,17 @@ const StakeInput = () => {
   const [stake, setStake] = useState('');
   const [error, setError] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setStake(value);
+
     try {
-      stakeSchema.parse(Number(value));
-      setError(false);
+      const numericValue = Number(value);
+      if (isNaN(numericValue) || numericValue <= 0) {
+        setError(true);
+      } else {
+        setError(false);
+      }
     } catch {
       setError(true);
     }
