@@ -14,8 +14,8 @@ export default function Leaderboard() {
     useEffect(() => {
         const generatedAddresses: string[] = [];
         for (let i = 0; i < 20; i++) {
-        let id = crypto.randomBytes(32).toString("hex");
-        let wallet = new ethers.Wallet("0x" + id);
+        const id = crypto.randomBytes(32).toString("hex");
+        const wallet = new ethers.Wallet("0x" + id);
         generatedAddresses.push(wallet.address);
         }
         setAddresses(generatedAddresses);
@@ -28,6 +28,7 @@ export default function Leaderboard() {
                     params: { results: 20 },
                 });
                 const fetchedNames: string[] = response.data.results.map(
+                    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
                     (user: any) => `${user.name.first}${user.name.last}`.toLowerCase().concat(".eth").replace(/\s+/g, '')
                 );
                 setNames(fetchedNames);
