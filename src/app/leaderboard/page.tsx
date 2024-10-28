@@ -23,17 +23,17 @@ export default function Leaderboard() {
 
     useEffect(() => {
         const fetchRandomUsers = async () => {
-        try {
-            const response = await axios.get("https://randomuser.me/api/", {
-            params: { results: 20 },
-            });
-            const fetchedNames: string[] = response.data.results.map(
-            (user: any) => `${user.name.first}${user.name.last}`.toLowerCase().concat(".eth")
-            );
-            setNames(fetchedNames);
-        } catch (error) {
-            console.error("Error fetching users:", error);
-        }
+            try {
+                const response = await axios.get("https://randomuser.me/api/", {
+                    params: { results: 20 },
+                });
+                const fetchedNames: string[] = response.data.results.map(
+                    (user: any) => `${user.name.first}${user.name.last}`.toLowerCase().concat(".eth").replace(/\s+/g, '')
+                );
+                setNames(fetchedNames);
+            } catch (error) {
+                console.error("Error fetching users:", error);
+            }
         };
         fetchRandomUsers();
     }, []);
