@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div style={{ display: 'flex', height: '100vh' }}>
       <Sidebar />
-      <main style={{ 
+      <main style={{
         flexGrow: 1,
         overflowY: 'auto',
         display: 'flex',
@@ -18,7 +18,7 @@ export default function Home() {
         alignItems: 'center',
         backgroundColor: '#f7f7f7'
       }}>
-        <div style={{ 
+        <div style={{
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
@@ -29,58 +29,58 @@ export default function Home() {
               <CardDescription style={{ fontSize: '1.2rem', marginTop: '1rem' }}>Staking Module</CardDescription>
             </CardHeader>
             <CardContent>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div>
-                <label htmlFor="stake" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Stake Amount</label>
-                <StakeInput />
-              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div>
+                  <label htmlFor="stake" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Stake Amount</label>
+                  <StakeInput />
+                </div>
 
-              <div>
-                <label htmlFor="bond" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Bond Amount</label>
-                <StakeInput />
-              </div>
+                <div>
+                  <label htmlFor="bond" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Bond Amount</label>
+                  <StakeInput />
+                </div>
 
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
-                <Button
-                  style={{
-                    backgroundColor: '#4CAF50',
-                    color: 'white',
-                    padding: '1.5rem 2rem',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '1rem'
-                  }}
-                  onClick={() => {
-                    toast({
-                      title: "Transaction Success!",
-                      description: "The block has confirmed.",
-                    })
-                  }}
-                >
-                  Stake
-                </Button>
-                <Button
-                  style={{
-                    backgroundColor: '#007BFF',
-                    color: 'white',
-                    padding: '1.5rem 2rem',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '1rem'
-                  }}
-                  onClick={() => {
-                    toast({
-                      title: "Transaction Success!",
-                      description: "The block has confirmed.",
-                    })
-                  }}
-                >
-                  Bond
-                </Button>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
+                  <Button
+                    style={{
+                      backgroundColor: '#4CAF50',
+                      color: 'white',
+                      padding: '1.5rem 2rem',
+                      border: 'none',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '1rem'
+                    }}
+                    onClick={() => {
+                      toast({
+                        title: "Transaction Success!",
+                        description: "The block has confirmed.",
+                      })
+                    }}
+                  >
+                    Stake
+                  </Button>
+                  <Button
+                    style={{
+                      backgroundColor: '#007BFF',
+                      color: 'white',
+                      padding: '1.5rem 2rem',
+                      border: 'none',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '1rem'
+                    }}
+                    onClick={() => {
+                      toast({
+                        title: "Transaction Success!",
+                        description: "The block has confirmed.",
+                      })
+                    }}
+                  >
+                    Bond
+                  </Button>
+                </div>
               </div>
-            </div>
             </CardContent>
           </Card>
         </div>
