@@ -8,24 +8,24 @@ const Sidebar = () => {
       <nav className={styles.navLinks}>
         <ul>
           <li>
-            <Button className={styles.clearButton}>
-              <Link href="/">Stake</Link>
-            </Button>
+            <Link href="/" passHref>
+              <Button className={styles.clearButton}>Home</Button>
+            </Link>
           </li>
           <li>
-          <Button className={styles.clearButton}>
-              <Link href="/">Bond</Link>
-            </Button>
+            <Link href="/leaderboard" passHref>
+              <Button className={styles.clearButton}>Leaderboard</Button>
+            </Link>
           </li>
           <li>
-          <Button className={styles.clearButton}>
-              <Link href="/">Farm</Link>
-            </Button>
+            <Link href="/farm" passHref>
+              <Button className={styles.clearButton}>Farm</Button>
+            </Link>
           </li>
           <li>
-            <Button className={styles.clearButton}>
-              <Link href="/">Governance</Link>
-            </Button>
+            <Link href="/governance" passHref>
+              <Button className={styles.clearButton}>Governance</Button>
+            </Link>
           </li>
         </ul>
       </nav>

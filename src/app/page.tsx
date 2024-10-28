@@ -3,6 +3,7 @@ import Sidebar from "../components/ui/sidebar/Sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "../components/ui/button";
 import { useToast } from "../hooks/use-toast"
+import StakeInput from "../components/ui/StakeInput"
 
 export default function Home() {
   const { toast } = useToast()
@@ -31,36 +32,12 @@ export default function Home() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
                 <label htmlFor="stake" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Stake Amount</label>
-                <input
-                  type="number"
-                  id="stake"
-                  name="stake"
-                  placeholder="Enter amount to stake"
-                  style={{ 
-                    width: '100%',
-                    padding: '0.5rem',
-                    marginTop: '0.5rem',
-                    border: '1px solid #ccc',
-                    borderRadius: '4px'
-                  }}
-                />
+                <StakeInput />
               </div>
 
               <div>
                 <label htmlFor="bond" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Bond Amount</label>
-                <input
-                  type="number"
-                  id="bond"
-                  name="bond"
-                  placeholder="Enter amount to bond"
-                  style={{ 
-                    width: '100%',
-                    padding: '0.5rem',
-                    marginTop: '0.5rem',
-                    border: '1px solid #ccc',
-                    borderRadius: '4px'
-                  }}
-                />
+                <StakeInput />
               </div>
 
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
